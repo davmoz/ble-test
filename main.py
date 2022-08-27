@@ -2,7 +2,7 @@ from ble import BLE
 from machine import UART
 from time import sleep_ms
 
-ble_obj = BLE("ESP32")
+ble_obj = BLE("ESP32dav")
 
 uart = UART(2, 9600, tx=17, rx=16)                         # init with given baudrate
 uart.init(9600, bits=8, parity=None, stop=1) # init with given parameters

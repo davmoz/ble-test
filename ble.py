@@ -65,8 +65,7 @@ class BLE():
 
     def send(self, data):
         if self.client_connected:
-            print("WOW", self.hr, float(data))
-            payload = struct.pack('<fffffff', float(data), 0, 0, 0, 0, 0, 0)
+            payload = struct.pack('<f', float(data))
             self.ble.gatts_notify(0, self.hr, payload + '\n')
 
     def advertiser(self):
